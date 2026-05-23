@@ -21,9 +21,9 @@ export default function Critique() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="critique" className="py-20 md:py-24 bg-card-white">
+    <section ref={sectionRef} id="critique" className="py-16 md:py-20 bg-card-white/40">
       <div className="max-w-content mx-auto px-4 md:px-6">
-        <h2 className="text-2xl md:text-3xl font-semibold text-deep-blue text-center mb-12">
+        <h2 className="text-2xl md:text-3xl font-medium text-deep-blue/90 text-center mb-12">
           {title}
         </h2>
         <div className="max-w-3xl mx-auto space-y-6">
@@ -33,17 +33,16 @@ export default function Critique() {
               initial={{ opacity: 0, y: 15 }}
               animate={visible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="pl-4 border-l-3 border-sage-green"
-              style={{ borderLeftWidth: '3px', borderLeftColor: '#3A7D76' }}
+              className="pl-4 border-l border-sage-green/30"
             >
-              <p className="text-text-primary text-base md:text-lg">{issue}</p>
+              <p className="text-text-primary/80 text-base md:text-lg font-normal">{issue}</p>
             </motion.div>
           ))}
           <motion.p
             initial={{ opacity: 0 }}
             animate={visible ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-10 text-xl md:text-2xl text-sage-green font-medium text-center pt-6 border-t border-border-light"
+            className="mt-10 text-xl md:text-2xl text-sage-green/70 font-light text-center pt-6 border-t border-border-light/50"
           >
             {conclusion}
           </motion.p>
