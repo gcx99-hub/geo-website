@@ -1,19 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+/* 替换原有的 body 样式 */
 @layer base {
   body {
     @apply bg-warm-sand text-text-primary font-sans antialiased;
+    background-image: radial-gradient(circle at 10% 20%, rgba(232,184,107,0.03) 0%, rgba(244,240,230,0.95) 90%);
+    /* 增加极轻微的径向光晕，产生空气感 */
   }
-  ::-webkit-scrollbar {
-    width: 8px;
+  
+  /* 降低整体默认字重，让页面安静 */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;  /* 从 700 降到 500 */
   }
-  ::-webkit-scrollbar-track {
-    background: #E2DCD0;
+  
+  /* 正文更轻，颜色对比降低 */
+  p, li, .text-primary {
+    color: #3A4A4A;  /* 从 #2C3A3A 调亮一点 */
   }
-  ::-webkit-scrollbar-thumb {
-    background: #8A9A8E;
-    border-radius: 4px;
+  
+  /* 次要文字进一步降低对比 */
+  .text-secondary {
+    color: #9EAA9A;  /* 从 #8A9A8E 更柔和 */
   }
 }
