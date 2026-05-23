@@ -13,7 +13,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-5xl font-bold text-deep-blue mb-6 leading-tight"
+          className="text-4xl md:text-6xl font-medium text-deep-blue/90 mb-6 leading-[1.2] tracking-tight"
         >
           {title}
         </motion.h1>
@@ -21,7 +21,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="space-y-2 mb-8 text-text-secondary"
+          className="space-y-1 mb-8 text-text-secondary/80 text-sm md:text-base"
         >
           {trustPoints.map((point, idx) => (
             <p key={idx}>{point}</p>
@@ -31,7 +31,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl md:text-2xl text-deep-blue/80 mb-10 max-w-2xl mx-auto"
+          className="text-xl md:text-2xl text-deep-blue/60 mb-10 max-w-2xl mx-auto font-light"
         >
           {hook}
         </motion.p>
@@ -42,7 +42,7 @@ export default function Hero() {
         >
           <a
             href="#timeline"
-            className="inline-block bg-warm-gold text-deep-blue font-semibold px-8 py-3 rounded-lg shadow-card hover:bg-amber-500 hover:-translate-y-0.5 transition-all duration-200"
+            className="inline-block bg-warm-gold/10 text-deep-blue/80 font-normal px-7 py-2.5 rounded-full border border-warm-gold/30 hover:bg-warm-gold/20 hover:border-warm-gold/50 transition-all duration-200 backdrop-blur-sm"
           >
             {cta}
           </a>
